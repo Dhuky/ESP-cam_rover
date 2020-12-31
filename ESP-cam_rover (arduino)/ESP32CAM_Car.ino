@@ -3,12 +3,12 @@
 #include <WiFi.h>
 #define CAMERA_MODEL_AI_THINKER
 
-const char* ssid = "Newbie_on";   //Coloque aqui o nome da sua rede
-const char* password = "9373Aa@3";   //Coloque aqui a senha da sua rede
+const char* ssid = "*********";   //Coloque aqui o nome da sua rede
+const char* password = "********";   //Coloque aqui a senha da sua rede
 
-  IPAddress ip(192,168,2,250);
-  IPAddress gateway(192,168,2,1);
-  IPAddress subnet(255,255,255,0);
+  IPAddress ip(192,168,2,250); //porta da sua escolha (preferencialmente valores altos, máximo com final .255)
+  IPAddress gateway(192,168,*,*); //Gateway padrão (adquirido no CMD do Windows)
+  IPAddress subnet(255,255,255,0);//Máscara de sub-rede (adquirido no CMD do Windows)
 
 // definindo modelo da câmera de acordo com a sua placa microcontrolada
 #if defined(CAMERA_MODEL_WROVER_KIT)
@@ -126,7 +126,7 @@ void setup() {
     return;
   }
 
-  //drop down frame size para maior taxa de frames inicial
+  //'drop down frame size' para maior taxa de frames inicial
   sensor_t * s = esp_camera_sensor_get();
   s->set_framesize(s, FRAMESIZE_CIF);
 
