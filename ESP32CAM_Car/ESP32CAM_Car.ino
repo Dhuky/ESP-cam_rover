@@ -11,12 +11,12 @@
 
 #define CAMERA_MODEL_AI_THINKER
 
-const char* ssid = "Newbie-on_2.4 GHz";   //Coloque aqui o nome da sua rede
-const char* password = "9373Aa@3";   //Coloque aqui a senha da sua rede
+const char* ssid = "Navegavel";   
+const char* password = "12345678"; 
 
-IPAddress ip(192, 168, 2, 255); //porta da sua escolha (preferencialmente valores altos, máximo com final .255)
-IPAddress gateway(192, 168, 0, 1); //Gateway padrão (adquirido no CMD do Windows)
-IPAddress subnet(255, 255, 255, 0); //Máscara de sub-rede (adquirido no CMD do Windows)
+//IPAddress ip(192, 168, 2, 255); //porta da sua escolha (preferencialmente valores altos, máximo com final .255)
+//IPAddress gateway(192, 168, 0, 1); //Gateway padrão (adquirido no CMD do Windows)
+//IPAddress subnet(255, 255, 255, 0); //Máscara de sub-rede (adquirido no CMD do Windows)
 
 #if defined(CAMERA_MODEL_WROVER_KIT) // definindo modelo da câmera de acordo com a sua placa microcontrolada
 
@@ -137,7 +137,7 @@ void setup() {
 
   WiFi.begin(ssid, password);
 
-  WiFi.config(ip, gateway, subnet);
+  //WiFi.config(ip, gateway, subnet);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
