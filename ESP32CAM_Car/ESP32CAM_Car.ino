@@ -11,8 +11,8 @@
 
 #define CAMERA_MODEL_AI_THINKER
 
-const char* ssid = "Navegavel";   
-const char* password = "12345678"; 
+const char* ssid = "Newbie-on_2.4 GHz";   
+const char* password = "9373Aa@3"; 
 
 //IPAddress ip(192, 168, 2, 255); //porta da sua escolha (preferencialmente valores altos, máximo com final .255)
 //IPAddress gateway(192, 168, 0, 1); //Gateway padrão (adquirido no CMD do Windows)
